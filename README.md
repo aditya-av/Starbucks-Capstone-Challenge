@@ -51,7 +51,7 @@ event (str) - record description (ie transaction, offer received, offer view
 person (str) - customer id
 time (int) - time in hours since the start of the test. The data begins at time t=0
 value - (dict of strings) - either an offer id or transaction amount depending on the record
-# esults
+# Results
 The main findings of the code can be found at the post available here.
 
 Based on the transcript records, we build an user-item-matrix that represents how users responded to the offers they received. We then split the records into the training set and the test set and trained our SVD algorithm to predict how a user responses to a particular offer. We achieved the lowest mean square error around 0.003823 with 15 latent features with the training set and around 0.009175 with 10 latent features with the testing set. After that, we created a recommendation engine that recommends Starbucks which offer should be sent to a particular user.
